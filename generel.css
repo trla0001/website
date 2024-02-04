@@ -232,11 +232,11 @@ nav {
 }
 
 /* % rabat */
-.discount_flex {
+.flex {
   display: flex;
   justify-content: space-between;
 }
-.discount_price {
+.discount {
   color: #c63d3b;
 }
 
