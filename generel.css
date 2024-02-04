@@ -1,0 +1,351 @@
+/*****Reset*****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+header {
+  margin: 0 8%;
+}
+
+main {
+  padding-top: 4%;
+  padding-bottom: 10%;
+  margin: 0 8%;
+}
+
+/********* Fonte styling ***********/
+h1 {
+  color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 3%;
+}
+h2 {
+  color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  padding-bottom: 10%;
+}
+h3 {
+  color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 2%;
+}
+h4 {
+  color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+h5 {
+  color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 3% 0 3% 0;
+}
+ul {
+  padding-bottom: 2%;
+}
+
+li {
+  list-style-type: none;
+  color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/******* Menu til desktop og burgermenu, fra tema 3 *********/
+
+/* header styling, flex */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 4% 0 3%;
+  background-color: #ffffff;
+}
+
+.logo {
+  width: 10%;
+}
+
+/* navigation, placering*/
+nav {
+  display: flex;
+  align-items: center;
+}
+
+/* menu, padding + gap */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 45px;
+}
+
+/* menu list margin */
+.menu li {
+  margin-right: 20px;
+}
+/* menu sidste li element */
+.menu li:last-child {
+  margin-right: 0;
+}
+
+/* menu hyperlink styling */
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #1e1e1e;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.menu a:hover {
+  color: #1e1e1e;
+  text-decoration: underline;
+}
+
+/* Burgermenu, styling */
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Burgermenu streger, styling */
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #1e1e1e;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+/* Burgermenu, % vises */
+.burger {
+  display: none;
+}
+
+/* Burgermenu, styling + line animation, mobile version */
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #e9e5e0;
+
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    text-align: left;
+  }
+}
+
+/* icons */
+.icons {
+  padding-left: 50px;
+}
+
+/********* Home page ***********/
+
+/********* Category page ***********/
+.category_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+.category_list a {
+  color: #ffffff;
+  background-color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  padding: 15%;
+  text-align: center;
+  text-decoration: none;
+}
+/********* Product list page ***********/
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10%;
+}
+
+/* % text decoration on a tag */
+.product_card a {
+  text-decoration: none;
+}
+.product_card_onSale a {
+  text-decoration: none;
+}
+.product_card_soldOut a {
+  text-decoration: none;
+}
+.product_card_onSale_soldOut a {
+  text-decoration: none;
+}
+
+/* % rabat */
+.discount_flex {
+  display: flex;
+  justify-content: space-between;
+}
+.discount_price {
+  color: #c63d3b;
+}
+
+/* Opacity img */
+.product_card_soldOut img {
+  opacity: 0.5;
+}
+.product_card_onSale_soldOut img {
+  opacity: 0.5;
+}
+
+/* Sold Out txt */
+.soldOut_txt {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 12px;
+}
+
+/********* Product page ***********/
+
+/* Brødkrumme navigation */
+.navigation_links {
+  padding-bottom: 5%;
+}
+.navigation_links a {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.navigation_links a:hover {
+  text-decoration: underline;
+}
+
+/* current page link styling */
+.current {
+  color: #1e1e1e;
+  text-decoration: underline;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Product information styling */
+.product_information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Forms styling */
+label,
+input,
+textarea,
+select,
+button,
+form {
+  display: block;
+  place-items: center;
+  display: grid;
+}
+
+/* Styling af button */
+select {
+  border-color: #1e1e1e;
+  background-color: #ffffff;
+  color: #1e1e1e;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px 40px;
+  cursor: pointer;
+  margin: 5% 0 3% 0;
+  place-content: center;
+}
+
+button {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+
+/********* Footer ***********/
+footer {
+  background-color: #1e1e1e;
+}
+
+.logo_footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.footer_flex {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  padding-bottom: 8%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+.footer_flex a {
+  color: #ffffff;
+  text-decoration: none;
+}
