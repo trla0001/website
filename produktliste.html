@@ -34,9 +34,11 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="grid_1-1-1">
+    <main class="product_list">
 
+
+        <!--
+            
             <article class="product_card">
                 <a href="produkt.html">
                     <img src="img/1573.webp" alt="pants">
@@ -70,24 +72,27 @@
                     <h4>DKK: 799,-</h4>
                 </a>
             </article>
+-->
 
-
-
-            <article class="product_card_onSale_soldOut">
+        <template class="product_card_onSale_soldOut">
+            <article>
                 <a href="produkt.html">
                     <h3 class="soldOut_txt">Sold Out</h3>
-                    <img src="img/1573.webp" alt="pants">
-                    <h3>Mean Team India Cricket Jersey</h3>
-                    <h5>Tshirts / Nike</h5>
-                    <h4>Prev. DKK: 2495,-</h4>
-                    <div class="discount_flex">
-                        <h4>Now DKK: 1123,-</h4>
-                        <h3 class="discount_price">-45%</h3>
+                    <img class="product_card_onSale_soldOut" src="img/1573.webp" alt="pants">
+                    <h3 class="productdisplayname">Mean Team India Cricket Jersey</h3>
+                    <h5> <span class="articletype">Tshirts </span> / <span class="brandname">Nike</span></h5>
+
+                    <h4>Prev. DKK: <span class="prev_price">2495</span>,-</h4>
+                    <div class="flex">
+                        <h4>Now DKK: <span class="now_price">1123</span>,-</h4>
+                        <h3>-<span class="discount">45</span>%</h3>
                     </div>
                 </a>
             </article>
+        </template>
 
-        </div>
+
+
 
     </main>
     <footer>
@@ -100,6 +105,8 @@
             <a href="produktliste.html">Product list</a>
         </div>
     </footer>
+
+    <script src="js/productlist.js"></script>
 </body>
 
 </html>
