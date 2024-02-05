@@ -251,8 +251,7 @@ template a {
 /* Sold Out txt */
 .soldOut_txt {
   position: absolute;
-  background-color: black;
-  color: white;
+  color: black;
   padding: 12px;
 }
 
