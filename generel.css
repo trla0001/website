@@ -221,7 +221,7 @@ nav {
 template a {
   text-decoration: none;
 }
-.product_card_onSale a {
+/*.product_card_onSale a {
   text-decoration: none;
 }
 .product_card_soldOut a {
@@ -229,7 +229,7 @@ template a {
 }
 .product_card_onSale_soldOut a {
   text-decoration: none;
-}
+}*/
 
 /* % rabat */
 .flex {
