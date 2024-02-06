@@ -217,19 +217,9 @@ nav {
   gap: 5rem;
 }
 
-/* % text decoration on a tag */
-template a {
+.product_article a {
   text-decoration: none;
 }
-/*.product_card_onSale a {
-  text-decoration: none;
-}
-.product_card_soldOut a {
-  text-decoration: none;
-}
-.product_card_onSale_soldOut a {
-  text-decoration: none;
-}*/
 
 /* % rabat */
 .flex {
@@ -240,19 +230,22 @@ template a {
   color: #c63d3b;
 }
 
-/* Opacity img */
-.product_card soldOut img {
-  opacity: 0.5;
-}
-.product_card img {
-  opacity: 0.5;
-}
-
-/* Sold Out txt */
-.soldOut_txt {
+/* Sold Out styling */
+.product_soldOut {
   position: absolute;
   color: black;
   padding: 12px;
+}
+
+/*.product_img {
+  opacity: 0.5;
+}*/
+
+/* Discount styling */
+
+/* Hide sold Out og discount price */
+.hide {
+  display: none;
 }
 
 /********* Product page ***********/

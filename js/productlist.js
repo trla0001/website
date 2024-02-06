@@ -17,11 +17,23 @@ function showProduct(product) {
   copy.querySelector(".product_img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector(".productdisplayname").textContent = product.productdisplayname;
   copy.querySelector(".brandname").textContent = product.brandname;
-  copy.querySelector(".prev_price").textContent = product.price;
-  copy.querySelector(".now_price").textContent = product.price;
+  copy.querySelector(".price").textContent = product.price;
   copy.querySelector(".discount").textContent = product.discount;
 
-  copy.querySelector(".product_card a").setAttribute("href", `produkt.html?id=${product.id}`);
+  // Link
+  copy.querySelector(".product_article a").setAttribute("href", `produkt.html?id=${product.id}`);
+
+  // Sold out
+  if (product.soldout >= 1) {
+    copy.querySelector(".product_soldOut").classList.remove("hide");
+    copy.querySelector(".product_article").classList.add("soldOut");
+  }
+
+  // Discount
+  /*if (product.discount) {
+    copy.querySelector(".product_discount").classList.remove("hide");
+    copy.querySelector(".beer_article").classList.add("product_discount");
+  }*/
 
   //appende
   document.querySelector("main").appendChild(copy);
