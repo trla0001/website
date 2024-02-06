@@ -27,6 +27,7 @@ function showProduct(product) {
   if (product.soldout >= 1) {
     copy.querySelector(".product_soldOut").classList.remove("hide");
     copy.querySelector(".product_article").classList.add("soldOut");
+    copy.querySelector(".product_article").classList.add("opacity");
   }
 
   // Discount
