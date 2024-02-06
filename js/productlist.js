@@ -21,7 +21,7 @@ function showProduct(product) {
   copy.querySelector(".now_price").textContent = product.price;
   copy.querySelector(".discount").textContent = product.discount;
 
-  copy.querySelector(".product_card_onSale_soldOut a").setAttribute("href", `produkt.html?id=${product.id}`);
+  copy.querySelector(".product_card a").setAttribute("href", `produkt.html?id=${product.id}`);
 
   //appende
   document.querySelector("main").appendChild(copy);

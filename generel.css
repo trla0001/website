@@ -241,10 +241,10 @@ template a {
 }
 
 /* Opacity img */
-.product_card_soldOut img {
+.product_card soldOut img {
   opacity: 0.5;
 }
-.product_card_onSale_soldOut img {
+.product_card img {
   opacity: 0.5;
 }
 
