@@ -30,10 +30,12 @@ function showProduct(product) {
   }
 
   // Discount
-  /*if (product.discount) {
+  if (product.discount) {
     copy.querySelector(".product_discount").classList.remove("hide");
-    copy.querySelector(".beer_article").classList.add("product_discount");
-  }*/
+    copy.querySelector(".product_price").classList.remove("product_price");
+
+    copy.querySelector(".product_article").classList.add("product_discount");
+  }
 
   //appende
   document.querySelector("main").appendChild(copy);

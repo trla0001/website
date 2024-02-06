@@ -222,13 +222,6 @@ nav {
 }
 
 /* % rabat */
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-.flex h3 {
-  color: #c63d3b;
-}
 
 /* Sold Out styling */
 .product_soldOut {
@@ -242,6 +235,11 @@ nav {
 }*/
 
 /* Discount styling */
+.product_discount {
+  display: flex;
+  justify-content: flex-end;
+  color: #c63d3b;
+}
 
 /* Hide sold Out og discount price */
 .hide {
