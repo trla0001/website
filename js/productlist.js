@@ -27,13 +27,12 @@ function showProduct(product) {
   if (product.soldout >= 1) {
     copy.querySelector(".product_soldOut").classList.remove("hide");
     copy.querySelector(".product_article").classList.add("soldOut");
-    copy.querySelector(".product_article").classList.add("opacity");
+    copy.querySelector(".product_img").classList.add("opacity");
   }
 
   // Discount
   if (product.discount) {
     copy.querySelector(".product_discount").classList.remove("hide");
-    copy.querySelector(".product_price").classList.remove("product_price");
 
     copy.querySelector(".product_article").classList.add("product_discount");
   }
