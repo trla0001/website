@@ -32,9 +32,9 @@ function showProduct(product) {
 
   // Discount
   if (product.discount) {
-    copy.querySelector(".product_discount").classList.remove("hide");
+    copy.querySelector(".product_discount_info").classList.remove("hide");
 
-    copy.querySelector(".product_article").classList.add("product_discount");
+    copy.querySelector(".product_discount_info").classList.add("product_discount_info");
   }
 
   //appende
