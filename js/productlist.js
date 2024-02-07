@@ -35,6 +35,7 @@ function showProduct(product) {
     copy.querySelector(".product_discount_info").classList.remove("hide");
 
     copy.querySelector(".product_discount_info").classList.add("product_discount_info");
+    copy.querySelector(".product_price").classList.add("hide");
   }
 
   //appende
