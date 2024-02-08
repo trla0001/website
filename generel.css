@@ -9,9 +9,6 @@ img {
   height: auto;
   display: block;
 }
-header {
-  margin: 0 8%;
-}
 
 main {
   padding-top: 4%;
@@ -79,6 +76,7 @@ header {
   align-items: center;
   padding: 2% 4% 0 3%;
   background-color: #ffffff;
+  border-bottom: 2px solid #f3f2f2;
 }
 
 .logo {
@@ -246,8 +244,9 @@ nav {
 /* Sold Out styling */
 .product_soldOut {
   position: absolute;
-  color: black;
+  color: white;
   padding: 12px;
+  background-color: black;
 }
 
 .opacity {
@@ -259,6 +258,11 @@ nav {
   display: flex;
   justify-content: flex-end;
   color: #c63d3b;
+}
+
+/* prev. price styling */
+.product_prev_price {
+  text-decoration: line-through;
 }
 
 /* Hide sold Out og discount price */
@@ -281,12 +285,6 @@ nav {
 }
 
 .navigation_links a:hover {
-  text-decoration: underline;
-}
-
-/* current page link styling */
-.current {
-  color: #1e1e1e;
   text-decoration: underline;
 }
 
@@ -340,6 +338,12 @@ button:hover {
   color: #1e1e1e;
   cursor: pointer;
   padding: 15px 50px;
+}
+
+/* current page link styling */
+.current {
+  color: #1e1e1e;
+  text-decoration: underline;
 }
 
 /********* Footer ***********/
