@@ -1,6 +1,9 @@
-fetch("https://kea-alt-del.dk/t7/api/products")
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
   .then((res) => res.json())
-  .then((data) => showProducts(data));
+  .then(showProducts);
 
 function showProducts(products) {
   //looper og kalder showProducts
@@ -19,6 +22,7 @@ function showProduct(product) {
   copy.querySelector(".brandname").textContent = product.brandname;
   copy.querySelector(".price").textContent = product.price;
   copy.querySelector(".discount").textContent = product.discount;
+  copy.querySelector(".prev_price").textContent = product.price;
 
   // Link
   copy.querySelector(".product_article a").setAttribute("href", `produkt.html?id=${product.id}`);
